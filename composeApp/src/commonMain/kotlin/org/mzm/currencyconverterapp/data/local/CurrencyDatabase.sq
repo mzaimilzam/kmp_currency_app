@@ -1,0 +1,16 @@
+-- composeApp/src/commonMain/sqldelight/org/mzm/currencyconverterapp/data/local/CurrencyDatabase.sq
+CREATE TABLE CurrencyTable (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT ,
+    code TEXT NOT NULL,
+    rate REAL NOT NULL
+);
+
+insertCurrencyRate:
+INSERT OR REPLACE INTO CurrencyTable (code, rate)
+VALUES (?, ?);
+
+getAllCurrencies:
+SELECT * FROM CurrencyTable;
+
+deleteAllCurrencies:
+DELETE FROM CurrencyTable;

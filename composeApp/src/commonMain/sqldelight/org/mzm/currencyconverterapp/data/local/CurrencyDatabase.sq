@@ -1,0 +1,17 @@
+CREATE TABLE currency (
+    code TEXT NOT NULL PRIMARY KEY,
+    rate REAL NOT NULL
+);
+
+insertOrReplaceCurrency:
+INSERT OR REPLACE INTO currency(code, rate)
+VALUES (?, ?);
+
+getAllCurrencies:
+SELECT * FROM currency;
+
+getCurrencyByCode:
+SELECT * FROM currency WHERE code = ?;
+
+deleteAllCurrencies:
+DELETE FROM currency;
