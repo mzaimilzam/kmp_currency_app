@@ -74,7 +74,7 @@ class CurrencyApiServiceImpl(private val preferencesRepository: PreferencesRepos
 
     companion object {
         const val ENDPOINT = "https://api.currencyapi.com/v3/latest"
-        const val API_KEY = "cur_live_DxA8viYo7ku3jt4QKlcNYhhTlJAB3Qh3vgKBwyhL"
+        const val API_KEY = "your_api_key"
 
     }
 
